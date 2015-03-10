@@ -1,13 +1,13 @@
-/** @jsx React.DOM */
 var React = require('react');
 
 var HelloMessage = React.createClass({
 	render: function() {
-		return <div>Hello {this.props.name}</div>;
+		return eval(require('./templates/hello-message.jsx'));
 	}
 });
 
+
 React.render(
-	<HelloMessage name="World" />,
+	eval(require('./templates/layout.jsx')),
 	document.getElementById('container')
 );
