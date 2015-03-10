@@ -6,7 +6,8 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{ test: /\.jsx$/, loader: 'raw!jsx-loader' }
+			{ test: /\.jsx$/, loader: 'raw!jsx-loader' },
+		  { test: /\.js$/, loader: 'babel?loose[]=all' }
 		]
 	}
 };

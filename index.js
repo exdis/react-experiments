@@ -1,13 +1,9 @@
 var React = require('react');
 
-var HelloMessage = React.createClass({
-	render: function() {
-		return eval(require('./templates/hello-message.jsx'));
-	}
-});
-
+import HelloMessage from './src/HelloMessage.js';
+var ComponentHelloMessage = React.createFactory(HelloMessage);
 
 React.render(
-	eval(require('./templates/layout.jsx')),
+	ComponentHelloMessage({ name: 'World' }),
 	document.getElementById('container')
 );
